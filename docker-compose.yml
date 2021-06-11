@@ -5,13 +5,9 @@ services:
     web:
         build: .
         command: python /code/manage.py runserver 0.0.0.0:8000
-        # command: gunicorn bookstore_project.wsgi -b 0.0.0.0:8000
-        # environment: 
-        #     - ENVIRONMENT=development
-        #     - SECRET_KEY=django-insecure-+58@x2mb-5nt49xcx(8623v@=7x+-gx3za!^4t+(n4he)1cf3#
-        #     - DEBUG=1
-        #     - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_51IiL2tSAwb2vRd35LYQAp1k3a5HevPcooSi3oTDUn4A3paZVh5M7ZptHPN9nBZrFfwXnrFqNQ36WTl0JR0GpgfEL00XvDFZUO3
-        #     - STRIPE_TEST_SECRET_KEY=sk_test_51IiL2tSAwb2vRd35WdGdcPFf9Caf5s7pxlfpxjV9UizHOvMYIFrTJhkOqXIvdI1N4nAJ5H1UnCrQPvrcQFimUTvZ00Z2FA0lgN
+        environment: 
+            - SECRET_KEY=django-insecure--*!%qx*@lo^a3=p1gqx&-0734se7%8euwfa6@ortv7qvzn2k(x
+            - DEBUG=1
         volumes:
             - .:/code
         ports:
